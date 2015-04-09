@@ -1,3 +1,10 @@
+=== 9 April 2015 - Version 2.0.0.beta4
+Rename gem to simply gem
+
+=== 8 April 2015 - Version 2.0.0.beta3
+Fixed Missing ruby extension to migrations
+Remove ruby gems deprecation warning message
+
 === 18 August 2011 - Version 2.0.0.beta
 Rewrite the whole gem to be more modular, API is exactly the same
 Only supports Rails 3.x
