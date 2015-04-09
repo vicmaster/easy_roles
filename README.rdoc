@@ -1,12 +1,12 @@
-= Simply Roles
+= Easy Roles
 
-Simple rails gem for basic role authorization with ruby on rails. forked from Easy Roles a non maintained gem. So they gave me the authorization to maintain it.
+Simple rails gem for basic role authorization with ruby on rails.
 
-## Changelog
+== Changelog
 
 Please read the CHANGELOG.rdoc file.
 
-## Install
+== Install
 
   gem install easy_roles 
   
@@ -14,9 +14,9 @@ or it can be installed as a rails plugin.
 
   script/plugin install git://github.com/platform45/easy_roles.git
   
-## Basic Setup
+== Basic Setup
 
-### Serialize Method
+=== Serialize Method
 
 Add the following to your Gemfile:
   gem 'easy_roles'
@@ -34,7 +34,7 @@ Then you need to add "easy_roles :column_name" to your model:
     easy_roles :roles
   end
   
-### Bitmask Method
+=== Bitmask Method
 
 Add the following to your Gemfile:
   
@@ -56,7 +56,7 @@ Add "easy_roles :column_name, method: :bitmask" to your model.
   
 And lastly you need to add a constant variable which stores an array of the different roles for your system. The name of the constant must be the name of your column in full caps.
 
-#### WARNING: Bitmask storage relies that you DO NOT change the order of your array of roles, if you need to add a new role, just append it to the end of the array.
+==== WARNING: Bitmask storage relies that you DO NOT change the order of your array of roles, if you need to add a new role, just append it to the end of the array.
 
   class User < ActiveRecord::Base
     easy_roles :roles_mask, method: :bitmask
@@ -65,7 +65,7 @@ And lastly you need to add a constant variable which stores an array of the diff
     ROLES_MASK = %w[admin moderator user]
   end
 
-## Usage
+== Usage
 
 Easy roles extends your model, and adds a few methods needed for basic role authorization.
 
@@ -84,7 +84,7 @@ For every method above there is a bang method too.
   add_role! 'role'
   remove_role! 'role'
   
-## Examples
+== Examples
 
   @user = User.first
   
@@ -111,7 +111,7 @@ For every method above there is a bang method too.
   
   etc etc
 
-## Protecting controllers
+== Protecting controllers
 
 There are many ways to implement views for specific roles, so I did not specifically supply one. Here's an example on what you could do:
 
@@ -136,7 +136,7 @@ Then in your AdminsController or any controller that you only want admins to vie
      before_filter :admin_required, only: %w(create update)
   end
 
-## Scopes
+== Scopes
 
 By default, easy_roles adds the `with_role` scope to your models.
 
@@ -154,7 +154,7 @@ Follow me on twitter: http://twitter.com/ryan_za
 
 Email: ryan *at* platform45.com
 
-## License
+== License
 
 Copyright (c) 2011 Platform45
 
