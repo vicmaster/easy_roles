@@ -1,4 +1,4 @@
-# Simply Roles
+= Simply Roles
 
 Simple rails gem for basic role authorization with ruby on rails. forked from Easy Roles a non maintained gem. So they gave me the authorization to maintain it.
 
